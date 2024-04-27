@@ -1,6 +1,9 @@
 #my copy script
 copy.sh
 
+#The rest are from https://github.com/github/gitignore
+#I am using this since the school computers are Macs
+
 # General
 .DS_Store
 .AppleDouble

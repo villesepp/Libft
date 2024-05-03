@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:30:21 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/30 14:21:07 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:39:26 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
-	i = 0;
 	if (dstsize <= dstlen)
-		dstlen = dstsize;
-	if (dstlen == dstsize)
 		return (dstsize + srclen);
-	while (dstlen + i < dstsize - 1)
+	i = 0;
+	while (src[i] != '\0' && i + dstlen + 1 < dstsize)
 	{
-		dst[dstlen + i] = src[i];
+		dst[i + dstlen] = src[i];
 		i++;
 	}
-	dst[dstlen + i] = '\0';
+	dst[i + dstlen] = '\0';
 	return (dstlen + srclen);
 }

@@ -6,7 +6,7 @@
 #    By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/21 16:13:37 by vseppane          #+#    #+#              #
-#    Updated: 2024/05/03 13:42:22 by vseppane         ###   ########.fr        #
+#    Updated: 2024/05/03 16:00:31 by vseppane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,10 +47,10 @@ SOURCES =		ft_isalpha.c \
 		ft_putnbr_fd.c \
 		ft_substr.c \
 		ft_strjoin.c \
-		ft_strlcat.c \
 		ft_itoa.c \
 		ft_strtrim.c \
-		ft_split.c
+		ft_split.c \
+		ft_strlcat.c
 
 BONUSSOURCES =		ft_lstnew_bonus.c \
 		ft_lstadd_front_bonus.c \

@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:51:39 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/30 10:12:00 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:37:47 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*node;
+	void	*p;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	new = NULL;
 	while (lst)
 	{
-		node = ft_lstnew(f(lst->content));
+		p = f(lst->content);
+		node = ft_lstnew(p);
 		if (!node)
 		{
+			del(p);
 			ft_lstclear(&new, del);
 			return (NULL);
 		}

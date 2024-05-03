@@ -6,13 +6,13 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:17:13 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/29 17:46:16 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/03 15:45:54 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_trimendpos(char const *s1, char const *set)
+static int	trim_end(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -37,7 +37,7 @@ static int	ft_trimendpos(char const *s1, char const *set)
 	return (i);
 }
 
-static int	ft_trimstartpos(char const *s1, char const *set)
+static int	trim_start(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
@@ -71,8 +71,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (ft_strlen(s1) == 0)
 		return (ft_strdup(""));
-	start = ft_trimstartpos(s1, set);
-	end = ft_trimendpos(s1, set);
+	start = trim_start(s1, set);
+	end = trim_end(s1, set);
 	if ((end - start + 2) <= 0)
 		return (ft_strdup(""));
 	res = (char *) malloc((end - start + 2) * sizeof(char));

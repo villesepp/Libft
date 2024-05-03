@@ -6,13 +6,13 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:35:06 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/03 11:42:36 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:12:11 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	wordstartend(char const *s, char c, int *start)
+static int	word_start_end(char const *s, char c, int *start)
 {
 	int	word;
 	int	i;
@@ -33,7 +33,19 @@ static int	wordstartend(char const *s, char c, int *start)
 	return (i - *start);
 }
 
-static void	tosubstrings(char const *s, char c, int words, char **strings)
+static char	**free_all(char **strings, int i)
+{
+	i--;
+	while (i >= 0)
+	{
+		free(strings[i]);
+		i--;
+	}
+	free(strings);
+	return (NULL);
+}
+
+static char	**to_substrings(char const *s, char c, int words, char **strings)
 {
 	int	start;
 	int	len;
@@ -43,15 +55,18 @@ static void	tosubstrings(char const *s, char c, int words, char **strings)
 	i = 0;
 	while (i < words)
 	{
-		len = wordstartend(s, c, &start);
+		len = word_start_end(s, c, &start);
 		strings[i] = ft_substr(s, start, len);
+		if (!strings[i])
+			return (free_all(strings, i));
 		i++;
 		start += len;
 	}
 	strings[i] = NULL;
+	return (strings);
 }
 
-static void	countwords(char const *s, char c, int *words)
+static void	count_words(char const *s, char c, int *words)
 {
 	int	word;
 
@@ -74,11 +89,14 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	char	**strings;
 
+	if (!s)
+		return (NULL);
 	words = 0;
-	countwords(s, c, &words);
-	strings = malloc((words + 1) * sizeof(char *));
+	count_words(s, c, &words);
+	strings = (char **) malloc((words + 1) * sizeof(char *));
 	if (!strings)
 		return (NULL);
-	tosubstrings(s, c, words, strings);
+	if (!to_substrings(s, c, words, strings))
+		return (NULL);
 	return (strings);
 }

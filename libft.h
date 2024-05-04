@@ -6,14 +6,13 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 10:24:57 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/02 14:46:17 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 13:42:33 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 

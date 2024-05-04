@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:37:48 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/04 13:58:55 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 14:39:48 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ static int	if_overflow(unsigned long res, int next_digit, int sign)
 	if (res >= 922337203685477580)
 	{
 		if (sign == 1)
-			if (next_digit > 7 || res > 922337203685477581)
+			if (next_digit > 7 || res >= 922337203685477581)
 				return (-1);
 		if (sign == -1)
-			if (next_digit > 8 || res > 922337203685477581)
+			if (next_digit > 8 || res >= 922337203685477581)
 				return (0);
 	}
 	return (1);

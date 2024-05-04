@@ -6,24 +6,45 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:37:48 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/21 14:38:16 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 13:58:55 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static int	if_overflow(unsigned long res, int next_digit, int sign)
 {
-	int	i;
-	int	sign;
-	int	result;
+	if (res >= 922337203685477580)
+	{
+		if (sign == 1)
+			if (next_digit > 7 || res > 922337203685477581)
+				return (-1);
+		if (sign == -1)
+			if (next_digit > 8 || res > 922337203685477581)
+				return (0);
+	}
+	return (1);
+}
 
-	i = 0;
-	sign = 1;
-	result = 0;
+static int	trim_spaces(const char *str, size_t i)
+{
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v'
 		|| str[i] == '\f' || str[i] == '\r')
 		i++;
+	return (i);
+}
+
+int	ft_atoi(const char *str)
+{
+	size_t			i;
+	int				sign;
+	unsigned long	res;
+	int				overflow;
+
+	i = 0;
+	sign = 1;
+	res = 0;
+	i = trim_spaces(str, i);
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
@@ -32,10 +53,11 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] != '\0' && (str[i] >= '0' && str[i] <= '9'))
 	{
-		result = result * 10 + (str[i] - 48);
+		overflow = if_overflow(res * 10, str[i] - 48, sign);
+		if (overflow != 1)
+			return (overflow);
+		res = res * 10 + (str[i] - 48);
 		i++;
 	}
-	if (sign == -1)
-		result = result * -1;
-	return (result);
+	return (res * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 15:32:42 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/23 12:51:44 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 16:23:25 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*n;
 	size_t	i;
-	int		j;
+	size_t	j;
 
 	if ((int)ft_strlen(needle) == 0)
 		return ((char *)haystack);

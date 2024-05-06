@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 15:27:45 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/25 15:33:19 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:36:26 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int	i;
-	char			*ptr;
+	size_t	i;
+	char	*ptr;
 
 	ptr = malloc ((ft_strlen(s) + 1) * sizeof(char));
-	if (!ptr)
+	if (!ptr || !f)
 		return (NULL);
 	i = 0;
 	while (s[i])

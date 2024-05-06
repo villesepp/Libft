@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:28:02 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/25 16:07:30 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 15:57:31 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	del(lst->content);
-	free(lst);
+	if (!del)
+		return ;
+	if (lst)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:14:42 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/22 17:31:09 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 16:23:55 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	size_t	i;
 	char	*ch;
 	char	*lch;
 

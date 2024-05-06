@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:35:06 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/03 16:12:11 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/06 11:25:03 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static int	word_start_end(char const *s, char c, int *start)
 
 static char	**free_all(char **strings, int i)
 {
-	i--;
 	while (i >= 0)
 	{
 		free(strings[i]);

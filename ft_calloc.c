@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 15:45:19 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/25 15:35:29 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/06 15:05:23 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	char	*ptr;
 
+	if (count && size && count > (SIZE_MAX / size))
+		return (NULL);
 	ptr = malloc(count * size);
-	if (ptr == NULL)
-		return (ptr);
+	if (!ptr)
+		return (NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }

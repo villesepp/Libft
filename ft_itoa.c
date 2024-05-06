@@ -6,17 +6,17 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 13:37:40 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/03 11:47:15 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 16:10:47 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	insert_chars(char *res, int n, int sign, int count)
+static void	insert_chars(char *res, int n, int sign, size_t count)
 {
 	long	ln;
 	int		remainder;
-	int		i;
+	size_t	i;
 
 	ln = n;
 	i = 0;
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 {
 	char	*res;
 	int		sign;
-	int		count;
+	size_t	count;
 
 	sign = is_negative(n);
 	count = count_digits(n);

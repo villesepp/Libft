@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 11:05:12 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/27 12:43:28 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 15:56:23 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
-	if (!*lst)
+	if (!*lst || !del || !lst)
 		return ;
 	while (*lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 15:29:00 by vseppane          #+#    #+#             */
-/*   Updated: 2024/04/25 15:29:09 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/04 16:03:28 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,11 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*ptr;
-
-	ptr = lst;
-	if (!ptr)
+	if (!lst)
 		return (NULL);
-	while (ptr->next)
+	while (lst->next)
 	{
-		ptr = ptr->next;
+		lst = lst->next;
 	}
-	return (ptr);
+	return (lst);
 }

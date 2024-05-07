@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:17:13 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/04 16:35:42 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/07 13:20:10 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res;
 	int		i;
 
+	if (!s1 || !set)
+		return (NULL);
 	if (ft_strlen(s1) == 0)
 		return (ft_strdup(""));
 	start = trim_start(s1, set);

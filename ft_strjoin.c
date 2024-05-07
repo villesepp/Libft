@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 15:02:48 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/03 15:35:16 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/07 12:14:29 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*ptr;
 
+	if (!s1 || !s2)
+		return (NULL);
 	len = ft_strlen(s1);
 	ptr = malloc((len + ft_strlen(s2) + 1) * sizeof(char));
 	if (!ptr)
@@ -37,3 +39,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[len + i] = '\0';
 	return (ptr);
 }
+/*
+int main(void)
+{
+	//char *s1 = "hello";
+	ft_strjoin(NULL, NULL);
+}
+*/

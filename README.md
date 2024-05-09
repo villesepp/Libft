@@ -2,6 +2,8 @@ This is my Libft project made in Hive Helsinki (a part of the 42 network (www.42
 
 ✅ I have ran the functions through the Francinette (https://github.com/xicodomingues/francinette) testing tool and there were no issues at the time. I had added some protections for some crashes, but since those are not included in the standard functions, I opted to remove those to get a passing mark on the testing tool.
 
+✅ Other testing tools I used were https://github.com/alelievr/libft-unit-test and https://github.com/Tripouille/libftTester.
+
 ✅ "Norminette", the tool that we use to check whether the code is written as per the style guidelines says everything is 'OK!'
 
 

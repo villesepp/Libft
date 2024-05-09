@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 15:02:48 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/07 12:14:29 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/07 16:22:23 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[len + i] = '\0';
 	return (ptr);
 }
-/*
-int main(void)
-{
-	//char *s1 = "hello";
-	ft_strjoin(NULL, NULL);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 14:57:15 by vseppane          #+#    #+#             */
-/*   Updated: 2024/05/07 12:14:51 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/05/09 12:53:29 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,3 @@ void	ft_putstr_fd(char *s, int fd)
 		}
 	}
 }
-/*
-int main(void)
-{
-	int fd;
-	char *s;
-
-	s = "hello";
-	fd = 0;
-	ft_putstr_fd(s, fd);
-}
-*/

@@ -7,3 +7,5 @@
 ✅ "Norminette", the tool that we use to check whether the code is written as per the style guidelines says everything is 'OK!'
 
 ✅ Project was passed with 125/100 points (incl. bonuses).
+
+😇 TODO: strjoin should return a string if either of the strings are valid i(strdup(thegoodstring))

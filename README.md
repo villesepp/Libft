@@ -8,6 +8,10 @@
 
 ✅ Project was passed with 125/100 points (incl. bonuses).
 
-➕ Functions added later: atoll, isspace, arr_free, is_number.
+➕ Functions added later:
+- atoll (string to long long)
+- isspace (is character a 'whitespace' character)
+- arr_free (free all strings in an array)
+- is_number (is string a number)
 
 😇 TODO: strjoin should return a string if either of the strings are valid i(strdup(thegoodstring))

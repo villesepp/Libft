@@ -8,4 +8,6 @@
 
 ✅ Project was passed with 125/100 points (incl. bonuses).
 
+➕ Functions added later: atoll, isspace.
+
 😇 TODO: strjoin should return a string if either of the strings are valid i(strdup(thegoodstring))

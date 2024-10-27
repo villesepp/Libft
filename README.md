@@ -13,5 +13,6 @@
 - isspace (is character a 'whitespace' character)
 - arr_free (free all strings in an array)
 - is_number (is string a number)
+- strcmp (string compare until \0 is found on either one)
 
-😇 TODO: strjoin should return a string if either of the strings are valid i(strdup(thegoodstring))
+😇 TODO: strjoin should return a pointer to a string if either of the strings are valid

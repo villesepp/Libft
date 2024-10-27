@@ -6,9 +6,11 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 13:34:28 by vseppane          #+#    #+#             */
-/*   Updated: 2024/10/19 13:34:38 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:21:26 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
  *	Free all strings inside of an array

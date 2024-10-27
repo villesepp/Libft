@@ -6,9 +6,11 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 13:18:11 by vseppane          #+#    #+#             */
-/*   Updated: 2024/10/19 13:18:25 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:20:47 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 long long	ft_atoll(const char *str)
 {

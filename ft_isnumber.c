@@ -6,9 +6,11 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 13:38:15 by vseppane          #+#    #+#             */
-/*   Updated: 2024/10/19 13:38:20 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:22:17 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
  * Checks if the string argument is a number

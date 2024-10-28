@@ -6,7 +6,7 @@
 /*   By: vseppane <vseppane@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 10:24:57 by vseppane          #+#    #+#             */
-/*   Updated: 2024/10/27 13:26:35 by vseppane         ###   ########.fr       */
+/*   Updated: 2024/10/28 13:45:22 by vseppane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,14 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
+void	ft_putstr_arr_fd(char **arr, int fd);
 
 void		ft_arr_free(char **arr);
 long long	ft_atoll(const char *str);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_isnumber(const char *str);
 int			ft_isspace(const int c);
+void		ft_putstrarr_fd(char **args, int fd);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
